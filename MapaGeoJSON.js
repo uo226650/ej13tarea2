@@ -4,6 +4,7 @@ con la situación del inicio y de los hitos de las rutas turísticas
 construidas en la práctica de XML*/
 
 //AIzaSyC8aUp4J8B-MOmk6mg4A8cSsbE3qzEpB1g
+//Problemas de accesibilidad en el marco del mapa dinámico de Google Maps
 
 class MapaDinamico {
 
@@ -44,7 +45,7 @@ class MapaDinamico {
     this.coordinates = [];
     try {
 
-      var archivoJSON = JSON.parse(archivo);
+      var archivoJSON = JSON.parse(archivo); //exception handling Try/catch(ES3)
       archivoJSON.features.forEach(feature => {
         feature.geometry.coordinates.forEach(coordinate => {
           this.coordinates.push(coordinate);
